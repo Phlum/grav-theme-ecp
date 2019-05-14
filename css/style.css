@@ -344,12 +344,12 @@ main section.item-body aside ul {
   list-style-type: none;
 }
 
-main section.item-body aside a:link, main section.item-body aside a:active, main section.item-body aside a:visited {
+main section.item-body a:link, main section.item-body a:active, main section.item-body a:visited {
   color: #b3c3e0;
   transition: color .25s;
 }
 
-main section.item-body aside a:hover {
+main section.item-body a:hover {
   color: #ff00aa;
 }
 
@@ -365,7 +365,7 @@ main section.item-body article>* {
   margin-bottom: 1.5em;
 }
 
-main section.item-body article>img {
+main section.item-body article img {
   display: block;
   margin: 0 auto;
   max-width: 100%;

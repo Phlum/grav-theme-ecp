@@ -11,12 +11,13 @@
     <h2>{{ page.title }}</h2>
     {% if header.custom.subtitle %}
     <h3>{{ header.custom.subtitle }}</h3>
+    {% endif %}
   </div>
 
   <section class="item-body">
     <aside class="item-meta">
       <ul>
-        <li>Filed under <a href="{{ page.parent.url }}">{{ page.parent }}</a></li>
+        <li>Filed under <a href="{{ page.parent.url }}">{{ page.parent.title }}</a></li>
         <li>Posted {{ page.date|nicetime(true) }}</li>
       </ul>
     </aside>
