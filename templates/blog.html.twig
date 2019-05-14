@@ -6,7 +6,7 @@
 
   <section class="blog-sidebar">
     <ul class="side-libraries">
-      {% for p in taxonomy.findTaxonomy({'category':'topLevel'}) %}
+      {% for p in taxonomy.findTaxonomy({'category':'section'}) %}
         <li><a href="{{ p.url }}">{{ p.title }}</a></li>
       {% endfor %}
     </ul>
