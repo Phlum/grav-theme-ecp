@@ -1,0 +1,27 @@
+title: Page Content
+@extends:
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+
+          fields:
+            header.custom.hero:
+              type: file
+              label: Main Image
+              destination: 'user/images/boxart'
+              multiple: false
+              accept:
+                - image/*
+
+            header.custom.subtitle:
+              type: text
+              label: Subtitle

@@ -1,0 +1,33 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<main id="page-single-item">
+
+  <div class="title-hero">
+    <img src="{{base_url}}/{{ header.custom.hero|first.path }}" alt="{{ page.title }}">
+  </div>
+  <div class="title-text">
+    <h2>{{ page.title }}</h2>
+    {% if header.custom.subtitle %}
+    <h3>{{ header.custom.subtitle }}</h3>
+  </div>
+
+  <section class="item-body">
+    <aside class="item-meta">
+      <ul>
+        <li>Filed under <a href="{{ page.parent.url }}">{{ page.parent }}</a></li>
+        <li>Posted {{ page.date|nicetime(true) }}</li>
+      </ul>
+    </aside>
+
+    <article>
+
+      {{ page.content }}
+
+    </article>
+  </section>
+
+</main>
+
+{% endblock %}

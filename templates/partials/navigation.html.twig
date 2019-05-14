@@ -1,0 +1,21 @@
+<nav role="navigation">
+  <ul class="nav-bar">
+
+  {% for page in taxonomy.findTaxonomy({'category':'topLevel'}) %}
+
+    <li><a href="{{ page.url }}">{{ page.title }}</a>
+
+    {% if page.collection | length > 0 %}
+      <ul class="submenu">
+      {% for p in page.collection %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
+    </li>
+
+  {% endfor %}
+
+  </ul>
+</nav>

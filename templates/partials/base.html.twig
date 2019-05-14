@@ -1,0 +1,64 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+{% block head %}
+  <meta charset="utf-8" />
+  <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title|e('html') }}</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include 'partials/metadata.html.twig' %}
+
+  <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+  <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+  {% block stylesheets %}
+  {% do assets.addCss('theme://css/style.css', 100) %}
+  {% do assets.addCss('theme://css/custom.css', 99) %}
+  {% do assets.addCss('theme://font-awesome/css/all.min.css', 98) %}
+  {% do assets.addCss('theme://css/magnific-popup.min.css', 97) %}
+  {% endblock %}
+  {{ assets.css() }}
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i" rel="stylesheet">
+
+  {% block javascripts %}
+  {% do assets.addJs('jquery', 100) %}
+  {% do assets.addJs('theme://js/jquery.magnific-popup.min.js', 99) %}
+  {% endblock %}
+  {{ assets.js() }}
+
+{% endblock head%}
+</head>
+<body class="{{ page.header.body_classes }}">
+  <header>
+  {% block navigation %}
+    {% include 'partials/navigation.html.twig' %}
+  {% endblock %}
+
+  <a href="index.htm"><img src="{{ url('theme://images/logo.png') }}" class="logo" role="banner" alt="{{ site.title }}"></a>
+
+  </header>
+
+  {% block body %}
+          {% block content %}{% endblock %}
+  {% endblock %}
+
+  {% block bottom %}
+      {{ assets.js('bottom') }}
+
+      <script type="text/javascript" defer>
+        $(document).ready(function() {
+          $('.image-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+              enabled: true
+            }
+          });
+        });
+      </script>
+{% endblock %}
+
+</body>
+</html>

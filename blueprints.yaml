@@ -1,0 +1,27 @@
+name: Earth Colony Project
+version: 0.1.0
+description: Congratulations! You are about to embark on an expedition that will help shape the future of humanity.
+icon: rocket
+author:
+  name: Spacefarer
+  email: command@spacefarer.space
+homepage: https://github.com/phlum/grav-theme-ecp
+demo: https://spacefarer.club
+keywords: grav, theme, blog, gallery, purple, green
+bugs: https://github.com/phlum/grav-theme-ecp/issues
+readme: https://github.com/phlum/grav-theme-ecp/blob/develop/README.md
+license: GPLv3
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+type: bool

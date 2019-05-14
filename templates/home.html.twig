@@ -1,0 +1,62 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<main id="page-home" role="main">
+
+  <section class="featured">
+    {% for p in taxonomy.findTaxonomy({'category':'article'})|slice(0,1) %}
+    <a href="{{ p.url }}">
+      <figcaption>{{ p.title }}</figcaption>
+      <img src="{{ p.header.custom.hero|first.path }}" alt="{{ p.title }}">
+    </a>
+    {% endfor %}
+  </section>
+
+  <section class="projects">
+    {% for p in taxonomy.findTaxonomy({'category':'video'})|slice(0,1) %}
+    <a href="{{ p.url }}">
+      <figcaption>{{ p.title }}</figcaption>
+      <img src="{{ p.header.custom.hero|first.path }}" alt="{{ p.title }}">
+    </a>
+    {% endfor %}
+  </section>
+
+  <section class="games">
+    {% for p in taxonomy.findTaxonomy({'category':'article'})|slice(1,2) %}
+    <a href="{{ p.url }}">
+      <figcaption>{{ p.title }}</figcaption>
+      <img src="{{ p.header.custom.hero|first.path }}" alt="{{ p.title }}">
+    </a>
+    {% endfor %}
+  </section>
+
+  <section class="blog">
+    {% for p in taxonomy.findTaxonomy({'category':'article'})|slice(2,3) %}
+    <a href="{{ p.url }}">
+      <img src="{{ p.header.custom.hero|first.path }}" alt="{{ p.title }}">
+    </a>
+    {% endfor %}
+  </section>
+
+  <section class="contact">
+    {% for p in taxonomy.findTaxonomy({'category':'article'})|slice(3,4) %}
+    <a href="{{ p.url }}">
+      <figcaption>{{ p.title }}</figcaption>
+      <img src="{{ p.header.custom.hero|first.path }}" alt="{{ p.title }}">
+    </a>
+    {% endfor %}
+  </section>
+
+  <section class="links">
+    {% for p in taxonomy.findTaxonomy({'category':'article'})|slice(4,5) %}
+    <a href="{{ p.url }}">
+      <figcaption>{{ p.title }}</figcaption>
+      <img src="{{ p.header.custom.hero|first.path }}" alt="{{ p.title }}">
+    </a>
+    {% endfor %}
+  </section>
+
+</main>
+
+{% endblock %}
