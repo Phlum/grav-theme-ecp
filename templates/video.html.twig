@@ -1,0 +1,32 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<main id="page-video">
+
+  <div class="item-video">
+    <iframe class="video-frame" src="https://www.youtube-nocookie.com/embed/{{ header.custom.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="title-text video-title">
+    <h2>{{ page.title }}</h2>
+  </div>
+
+  <section class="item-body video-desc">
+    <aside class="item-meta video-meta">
+      <ul>
+        <li>Filed under <a href="{{ page.parent.url }}">{{ page.parent.title }}</a></li>
+        <li>Posted {{ page.date|nicetime(true) }}</li>
+      </ul>
+    </aside>
+
+    <article>
+
+      {{ page.content }}
+
+    </article>
+  </section>
+
+</main>
+
+{% endblock %}

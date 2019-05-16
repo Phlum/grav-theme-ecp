@@ -17,7 +17,7 @@
     {% for p in taxonomy.findTaxonomy({'category':'video'})|slice(0,1) %}
     <a href="{{ p.url }}">
       <figcaption>{{ p.title }}</figcaption>
-      <img src="{{ p.header.custom.hero|first.path }}" alt="{{ p.title }}">
+      <img src="https://img.youtube.com/vi/{{ p.header.custom.video }}/maxresdefault.jpg" alt="{{ p.title }}">
     </a>
     {% endfor %}
   </section>

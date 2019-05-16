@@ -1,0 +1,20 @@
+title: Page Content
+@extends:
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+
+          fields:
+
+            header.custom.video:
+              type: text
+              label: Video ID (e.g.: sGDQ7WY7_Ig)

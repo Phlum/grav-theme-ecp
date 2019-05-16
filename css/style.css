@@ -185,7 +185,7 @@ main#page-home section:hover img {
   filter: grayscale(100%) brightness(150%);
 }
 
-main#page-blog, main#page-single-item {
+main#page-blog, main#page-single-item, main#page-video {
   width: 95%;
   padding: 50px 0 80px 0;
 }
@@ -382,6 +382,8 @@ main section.item-body article>blockquote {
 main section.item-body article>cite {
   display: block;
 }
+
+
 
 @media all and (max-width: 1200px) {
   main .title-hero {
