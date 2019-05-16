@@ -15,10 +15,10 @@
 
   </section>
 
-  {% for p in page.children %}
+  {% for p in page.collection %}
 
   <section class="blog-post">
-    <span class="blog-meta">{{ p.date|nicetime(true) }} - <a href="#">{{ p.parent.url }}</a></span>
+    <span class="blog-meta">{{ p.date|nicetime(true) }} - <a href="{{ p.parent.url }}">{{ p.parent.title }}</a></span>
     <a href="{{ p.url }}" class="blog-item">
       <h2>{{ p.title }}</h2>
       <p>

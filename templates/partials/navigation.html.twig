@@ -7,7 +7,7 @@
 
     {% if p.collection | length > 0 %}
       <ul class="submenu">
-      {% for q in p.collection %}
+      {% for q in p.children %}
         <li><a href="{{ q.url }}">{{ q.title }}</a></li>
       {% endfor %}
       </ul>
