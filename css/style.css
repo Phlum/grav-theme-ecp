@@ -157,18 +157,31 @@ main#page-home section figcaption {
   align-items: flex-end;
   width: 100%;
   height: 100%;
-  font-size: 300%;
+  font-size: 200%;
   font-weight: 700;
-  letter-spacing: .5em;
   text-transform: uppercase;
-  text-shadow: 0 2px 10px rgba(0,0,0,.75);
+  text-shadow: 0 2px 5px black;
   background-color: rgba(255,0,170,0);
   transition: all .3s;
+}
+
+main#page-home section.featured figcaption {
+  font-size: 300%;
+  text-shadow: 0 2px 10px rgba(0,0,0,.75);
+}
+
+main#page-home section.article-small figcaption {
+  color: rgba(0,0,0,0);
+  text-shadow: none;
 }
 
 main#page-home section:hover figcaption {
   color: #00FFAF;
   background-color: rgba(255,0,170,.25);
+}
+
+main#page-home section.article-small:hover figcaption {
+  color: rgba(0,0,0,0);
 }
 
 main#page-home section img {
@@ -200,12 +213,12 @@ main section.featured {
   grid-row: span 2;
 }
 
-main section.projects {
+main section.latest-article {
   grid-column: 1 / span 3;
   grid-row: span 1;
 }
 
-main section.games {
+main section.latest-video {
   grid-column: 4 / span 2;
   grid-row: span 2;
 }
@@ -386,6 +399,21 @@ main section.item-body article>blockquote {
 
 main section.item-body article>cite {
   display: block;
+}
+
+main section.item-images {
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+main section.item-images img {
+  max-width: 290px;
+  margin: 0 .5em;
+  border-radius: 5px;
+  max-height: 320px;
+  box-shadow: 0 0 10px black;
 }
 
 main .item-video {

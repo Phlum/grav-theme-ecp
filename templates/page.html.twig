@@ -26,6 +26,14 @@
 
       {{ page.content }}
 
+      <section class="item-images">
+        {% for image in page.media.images %}
+          <a class="popup-image" href="{{ image.url }}">
+            <img src="{{ image.url }}" alt="{{ page.title }} Screenshot">
+          </a>
+        {% endfor %}
+      </section>
+
     </article>
   </section>
 
